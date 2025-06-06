@@ -6,3 +6,6 @@ Notizbuch:
 * und 
 * 20L -> 30kg gefüllt -> Gasmenge 7,18kg ->   -> (16,03 €*/ m³) Gasgewicht bei 20degC: 7,15kg -> 2,23 €/kg
 * Stahlflaschen
+
+
+[HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
