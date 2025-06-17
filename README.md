@@ -14,7 +14,7 @@ Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/m
 Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker.
 Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
 <br><br>
-z.B gaswaage/values   
+<h3>z.B gaswaage/values</h3>   
 "Scale Reading": 32409  - alle 10 Sekunden wert in Gramm<br><br>
 z.B. gaswaage/status  
 "revision":"1.0_250612", - SW-Revision 
