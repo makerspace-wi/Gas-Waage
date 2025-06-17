@@ -34,12 +34,12 @@ ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werde
 "ip":"192.168.X.XXX"  
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
-"{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)  
-"{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)  
-"{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage  
-"{newbottle}"  -> muss jedesmal ausgeführt werden, wenn eine neue Flasche aufgestellt wird  
-"{reset}"  -> Controller RESET  
-"{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)  
+"{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
+"{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
+"{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage<br> 
+"{newbottle}"  -> muss jedesmal ausgeführt werden, wenn eine neue Flasche aufgestellt wird<br> 
+"{reset}"  -> Controller RESET<br> 
+"{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)<br> 
 
 
 
