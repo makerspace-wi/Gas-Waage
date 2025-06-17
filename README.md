@@ -11,7 +11,7 @@ Annahmen:
 Es wurde eine 60kg Wägezelle (Quelle: Holger G.) in eine Halterung aus Holz (Orlando E.) gebaut. Das Unterteil ist quadratisch und hat 3 dem Boden angepasste Standfüße.
 Das Oberteil hat eine runde Form, die 10 und 20 Liter Stahlflaschen aufnehmen kann.<br><br>
 Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/master) Interface verbunden, dass seine Messdaten per I2C einem WEMOS D1 mini NodeMCU bereit stellt.<br><br>
-Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker.
+Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker und in einer EPROM-Emulation (FLASH-Speicherbereich) werden alle wichtigen Systemvariablen gespeichert, sie sind nach einem Neustart verfügbar.
 Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
 <br><br>
 <h4>z.B gaswaage/values</h4>   
