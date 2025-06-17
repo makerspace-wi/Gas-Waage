@@ -14,9 +14,9 @@ Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/m
 Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker.
 Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
 <br><br>
-<h3>z.B gaswaage/values</h3>   
-"Scale Reading": 32409  - alle 10 Sekunden wert in Gramm<br><br>
-z.B. gaswaage/status  
+<h4>z.B gaswaage/values</h4>   
+"Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
+<h4>z.B. gaswaage/status</h4>  
 "revision":"1.0_250612", - SW-Revision 
 "ip":"192.168.X.XXX",  - IP  
 "rssi":-79,  - WLAN Signalstärke  
@@ -28,7 +28,7 @@ z.B. gaswaage/status
 "eeprom_use":1,  - EPROM-Nutzung in %  
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
 ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
-z.B. gaswaage/lwt  
+<h4>z.B. gaswaage/lwt</h4>  
 "status":"online",  
 "client":"gaswaage_1",  
 "ip":"192.168.X.XXX"  
