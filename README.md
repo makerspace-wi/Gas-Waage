@@ -18,7 +18,7 @@ z.B gaswaage/values
 "Scale Reading": 32409  # alle 10 Sekunden wert in Gramm<br><br>
 z.B. gaswaage/status  
 "revision":"1.0_250612", # SW-Revision 
-"ip":"192.168.1.103",  # IP  
+"ip":"192.168.X.XXX",  # IP  
 "rssi":-79,  # WLAN Signalstärke  
 "cnt_reconnect":0,  # Anzahl der WLAN-Reconnct Versuche  
 "client":"gaswaage_1",  # Client Name  
@@ -26,6 +26,11 @@ z.B. gaswaage/status
 "offset":108917,  # TARA Wert für leere Waage  
 "Initial Botttle Weight":32298,  # Flaschengewicht wenn neue Flasche aufgestellt wird  
 "eeprom_use":1,  # EPROM-Nutzung in %  
-"last TS":"17.06.25 11:20:00"  # Zeitmarke der letzten Aktualisierung  
+"last TS":"17.06.25 11:20:00"  # Zeitmarke der letzten Aktualisierung<br><br>
+ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
+z.B. gaswaage/lwt  
+"status":"online",  
+"client":"gaswaage_1",  
+"ip":"192.168.X.XXX"  
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
