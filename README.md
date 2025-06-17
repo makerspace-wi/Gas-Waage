@@ -32,5 +32,15 @@ z.B. gaswaage/lwt
 "status":"online",  
 "client":"gaswaage_1",  
 "ip":"192.168.X.XXX"  
+<br><br>
+Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
+"{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)  
+"{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)  
+"{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage  
+"{newbottle}"  -> muss jedesmal ausgeführt werden, wenn eine neue Flasche aufgestellt wird  
+"{reset}"  -> Controller RESET  
+"{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)  
+
+
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
