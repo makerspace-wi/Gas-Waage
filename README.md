@@ -18,14 +18,14 @@ z.B gaswaage/values
 "Scale Reading": 32409  # alle 10 Sekunden wert in Gramm<br><br>
 z.B. gaswaage/status  
 "revision":"1.0_250612", # SW-Revision 
-"ip":"192.168.1.103",  # IP
-"rssi":-79,  # WLAN Signalstärke
-"cnt_reconnect":0,  # Anzahl der WLAN-Reconnct Versuche
-"client":"gaswaage_1",  # Client Name
-"scale":74.33300018,  # Waagenkalibrierwert
-"offset":108917,  # TARA Wert für leere Waage
-"Initial Botttle Weight":32298,  # Flaschengewicht wenn neue Flasche aufgestellt wird
-"eeprom_use":1,  # EPROM-Nutzung in %
-"last TS":"17.06.25 11:20:00"  # Zeitmarke der letzten Aktualisierung
+"ip":"192.168.1.103",  # IP  
+"rssi":-79,  # WLAN Signalstärke  
+"cnt_reconnect":0,  # Anzahl der WLAN-Reconnct Versuche  
+"client":"gaswaage_1",  # Client Name  
+"scale":74.33300018,  # Waagenkalibrierwert  
+"offset":108917,  # TARA Wert für leere Waage  
+"Initial Botttle Weight":32298,  # Flaschengewicht wenn neue Flasche aufgestellt wird  
+"eeprom_use":1,  # EPROM-Nutzung in %  
+"last TS":"17.06.25 11:20:00"  # Zeitmarke der letzten Aktualisierung  
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
