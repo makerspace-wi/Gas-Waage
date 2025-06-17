@@ -17,20 +17,20 @@ Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 S
 <h4>z.B gaswaage/values</h4>   
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
 <h4>z.B. gaswaage/status</h4>  
-"revision":"1.0_250612", - SW-Revision 
-"ip":"192.168.X.XXX",  - IP  
-"rssi":-79,  - WLAN Signalstärke  
-"cnt_reconnect":0,  - Anzahl der WLAN-Reconnct Versuche  
-"client":"gaswaage_1",  - Client Name  
-"scale":74.33300018,  - Waagenkalibrierwert  
-"offset":108917,  - TARA Wert für leere Waage  
-"Initial Botttle Weight":32298,  - Flaschengewicht wenn neue Flasche aufgestellt wird  
-"eeprom_use":1,  - EPROM-Nutzung in %  
+"revision":"1.0_250612", - SW-Revision<br> 
+"ip":"192.168.X.XXX",  - IP<br> 
+"rssi":-79,  - WLAN Signalstärke<br> 
+"cnt_reconnect":0,  - Anzahl der WLAN-Reconnct Versuche<br> 
+"client":"gaswaage_1",  - Client Name<br> 
+"scale":74.33300018,  - Waagenkalibrierwert<br> 
+"offset":108917,  - TARA Wert für leere Waage<br>  
+"Initial Botttle Weight":32298,  - Flaschengewicht wenn neue Flasche aufgestellt wird<br> 
+"eeprom_use":1,  - EPROM-Nutzung in %<br> 
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
 ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
 <h4>z.B. gaswaage/lwt</h4>  
-"status":"online",  
-"client":"gaswaage_1",  
+"status":"online"<br>  
+"client":"gaswaage_1",<br>   
 "ip":"192.168.X.XXX"  
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
