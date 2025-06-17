@@ -10,6 +10,22 @@ Annahmen:
 
 Es wurde eine 60kg Wägezelle (Quelle: Holger G.) in eine Halterung aus Holz (Orlando E.) gebaut. Das Unterteil ist quadratisch und hat 3 dem Boden angepasste Standfüße.
 Das Oberteil hat eine runde Form, die 10 und 20 Liter Stahlflaschen aufnehmen kann.<br><br>
-Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/master) Interface verbunden, dass seine Messdaten per I2C einem WEMOS D1 mini bereit stellt.<br><br>
+Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/master) Interface verbunden, dass seine Messdaten per I2C einem WEMOS D1 mini NodeMCU bereit stellt.<br><br>
+Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker.
+Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
+<br><br>
+z.B gaswaage/values   
+"Scale Reading": 32409 // alle 10 Sekunden wert in Gramm<br><br>
+z.B. gaswaage/status  
+"revision":"1.0_250612",  
+"ip":"192.168.1.103",  
+"rssi":-79,  
+"cnt_reconnect":0,  
+"client":"gaswaage_1",  
+"scale":74.33300018,  
+"offset":108917,  
+"Initial Botttle Weight":32298,  
+"eeprom_use":1,  
+"last TS":"17.06.25 11:20:00"  
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
