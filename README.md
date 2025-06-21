@@ -17,7 +17,7 @@ Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 S
 <br><br>
 <h4>topic gaswaage/values</h4>   
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
-<h4>z.B. topic gaswaage/status</h4>  
+<h4>topic gaswaage/status</h4>  
 "revision":"1.0_250612", - SW-Revision<br> 
 "ip":"192.168.X.XXX",  - IP<br> 
 "rssi":-79,  - WLAN Signalstärke<br> 
@@ -35,7 +35,7 @@ ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werde
 "ip":"192.168.X.XXX"  
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
-topic gaswaage/in<br>
+<h4>topic gaswaage/in</h4><br>
 "{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
 "{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
 "{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage<br> 
