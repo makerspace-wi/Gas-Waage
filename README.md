@@ -15,7 +15,7 @@ Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/m
 Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker und in einer EPROM-Emulation (FLASH-Speicherbereich) werden alle wichtigen Systemvariablen gespeichert, sie sind nach einem Neustart verfügbar.
 Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
 <br><br>
-<h4>z.B topic gaswaage/values</h4>   
+<h4>topic gaswaage/values</h4>   
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
 <h4>z.B. topic gaswaage/status</h4>  
 "revision":"1.0_250612", - SW-Revision<br> 
@@ -29,7 +29,7 @@ Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 S
 "eeprom_use":1,  - EPROM-Nutzung in %<br> 
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
 ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
-<h4>z.B. topic gaswaage/lwt</h4>  
+<h4>topic gaswaage/lwt</h4>  
 "status":"online"<br>  
 "client":"gaswaage_1",<br>   
 "ip":"192.168.X.XXX"  
