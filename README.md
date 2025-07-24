@@ -43,9 +43,6 @@ Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 "{reset}"  -> Controller RESET<br> 
 "{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)<br> 
 
-
-
-[HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
 # Achtung - bitte beachten!
 Die Sicherungskette für die Gasflasche soll 'locker' sein, um nicht den Wiegevorgang zu beeinflussen. 
 Auch darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.
