@@ -69,7 +69,7 @@ Wird ein falscher Passcode eingegeben, springt die Anzeige zurück auf Screen #1
 <img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480"><br><br>
 Die Funktionen können fatale Folgen haben, deshalb bitte mit Bedacht ausführen.<br>
 Funktionen:
-* Waage nullen - Diese Funktion sollte nur bei leerer Waage ausgeführt werden - sie setzt den Nullpunkt der Waage neu
+* Waage nullen - Diese Funktion sollte nur bei leerer Waage ausgeführt werden - sie setzt und speichert den Nullpunkt der Waage neu
 * Neue Flasche - Nach dem Aufstellen einer neu gefüllten Flasche, muss diese Funktion ausgeführt werden. Es wird das Initial-(Start)Gewicht gemessen und gespeichert. Tages- und Summenverbrauch sowie die 'Kosten heute' auf '0' gesetzt.
 * EPROM löschen - Vorsicht! Löscht den in Flash Memory emulierten EPROM-Bereich - sollte nur durch Admins ausgelöst werden, gefolgt von einem RESET.
 * Waage neu starten (RESET) - selbsterklärend
