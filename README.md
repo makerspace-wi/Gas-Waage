@@ -63,6 +63,7 @@ Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin
 
 ### Display Screen #2
 <img src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" width="480">
-
+wird hier der korrekte 4-stellige Passcode eingegeben, öffnet sich der Screen #3, von dem aus verschiedene Scripte gestartet werden können<br>
+Wird ein falscher Passcode eingegeben, springt die Anzeige zurück auf Screen #1
 ### Display Screen #3
 <img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480">
