@@ -61,7 +61,7 @@ zeigt die aktuellen Informationen:<br>
 * Kosten heute (Euro) - zeigt die errechneten Tageskosten in Euro an (bitte aufgerundet in die Spendenkasse legen)
 * Verbrauch Summe (g) - zeigt den akkumulierten Gasverbrauch in Gramm seit dem Aufstellen der Flasche an
 
-Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin-Passwortes (kennen nur die Admins und Schweißeinweiser)
+Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin-Passcodes (kennen nur Personen mit dem 'need to know')
 
 ### Display Screen #2
 <img src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" width="480"><br><br>
@@ -72,7 +72,7 @@ Wird ein falscher Passcode eingegeben, springt die Anzeige zurück auf Screen #1
 <img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480"><br><br>
 Die Funktionen können fatale Folgen haben, deshalb bitte mit Bedacht ausführen.<br>
 Funktionen:
-* Waage nullen - 
-* Neue Flasche - 
-* EPROM löschen - 
-* Waage neu starten (RESET) - 
+* Waage nullen - Diese Funktion sollte nur bei leerer Waage ausgeführt werden - sie setzt den Nullpunkt der Waage neu
+* Neue Flasche - Nach dem Aufstellen einer neu gefüllten Flasche, muss diese Funktion ausgeführt werden. Es wird das Initial-(Start)Gewicht gemessen und gespeichert. Tages- und Summenverbrauch sowie die 'Kosten heute' auf '0' gesetzt.
+* EPROM löschen - Vorsicht! Löscht den in Flash Memory emulierten EPROM-Bereich - sollte nur durch Admins ausgelöst werden, gefolgt von einem RESET.
+* Waage neu starten (RESET) - selbsterklärend
