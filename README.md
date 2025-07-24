@@ -70,3 +70,9 @@ Wird ein falscher Passcode eingegeben, springt die Anzeige zurück auf Screen #1
 
 ### Display Screen #3
 <img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480"><br><br>
+Die Funktionen können fatale Folgen haben, deshalb bitte mit Bedacht ausführen.<br>
+Funktionen:
+* Waage nullen - 
+* Neue Flasche - 
+* EPROM löschen - 
+* Waage neu starten (RESET) - 
