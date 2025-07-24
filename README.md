@@ -47,3 +47,12 @@ Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
+
+## Gaswaage Display - normalerweise gedimmt und wird heller, wenn man den screen mit dem Finger berührt
+### Display Screen #1
+
+<img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f"> <br><br>
+
+<img width="480" height="479" alt="Image" src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" />
+
+<img width="479" height="480" alt="Image" src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" />
