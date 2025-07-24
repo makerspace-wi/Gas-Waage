@@ -50,7 +50,7 @@ Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 ## Gaswaage Display
 normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
 ### Display Screen #1
-<img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f" width="480"> <br><br>
+<img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f" width="480"><br><br>
 zeigt die aktuellen Informationen:<br>
 * Startgewicht(g) - ist das Gesamtgewicht beim Aufstellen einer neuen Flasche
 * Flaschentyp - zeigt 10 Liter Flasche oder 20 Liter Flasche je nach aufgestelltem Typ (wird von SYMCON ermittelt)
@@ -62,8 +62,9 @@ zeigt die aktuellen Informationen:<br>
 Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin-Passwortes (kennen nur die Admins und Schweißeinweiser)
 
 ### Display Screen #2
-<img src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" width="480">
+<img src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" width="480"><br><br>
 wird hier der korrekte 4-stellige Passcode eingegeben, öffnet sich der Screen #3, von dem aus verschiedene Scripte gestartet werden können<br>
 Wird ein falscher Passcode eingegeben, springt die Anzeige zurück auf Screen #1
+
 ### Display Screen #3
-<img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480">
+<img src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" width="480"><br><br>
