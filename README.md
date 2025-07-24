@@ -57,7 +57,8 @@ zeigt die aktuellen Informationen:<br>
 * Gewicht aktuell (g) - ist das aktuelle Gewicht, dass alle 15 Sekunden aktualisiert wird
 * Verbrauch - heute (g) - zeigt den Tagesverbrauch (0:00 - 23:59) in 10g Schritten
 * Kosten heute (Euro) - zeigt die errechneten Tageskosten in Euro an (bitte aufgerundet in die Spendenkasse legen)
-* Verbrauch Summe (g) - zeigt den akkumulierten Gasverbrauch in Gramm seit dem Aufstellen der Flasche an
+* Verbrauch Summe (g) - zeigt den akkumulierten Gasverbrauch in Gramm seit dem Aufstellen der Flasche an<br><br>
+Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin-Passwortes (kennen nur die Admins und Schweißeinweiser)
 
 ### Display Screen #2
 <img src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" width="480">
