@@ -46,7 +46,9 @@ Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 
 
 [HX711 Library Description](https://github.com/RobTillaart/HX711/tree/master)
-
+# Achtung - bitte beachten!
+Die Sicherungskette für die Gasflasche soll 'locker' sein, um nicht den Wiegevorgang zu beeinflussen. 
+Auch darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.
 ## Gaswaage Display
 normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
 ### Display Screen #1
