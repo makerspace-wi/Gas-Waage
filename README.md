@@ -53,12 +53,12 @@ normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berüh
 ### Display Screen #1
 <img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f" width="480"> <br><br>
 zeigt die aktuellen Informationen:<br>
-* Startgewicht(g) - ist das Gesamtgewicht auf der Wagge beim aufstellen einer neuen Flasche
+* Startgewicht(g) - ist das Gesamtgewicht beim Aufstellen einer neuen Flasche
 * Flaschentyp - zeigt 10 Liter Flasche oder 20 Liter Flasche je nach aufgestelltem Typ (wird von SYMCON ermittelt)
-* Gewicht aktuell (g) - 
-* Verbrauch - heute (g) -
-* Kosten heute (Euro) - 
-* Verbrauch Summe (g) - 
+* Gewicht aktuell (g) - ist das aktuelle Gewicht, dass alle 15 Sekunden aktualisiert wird
+* Verbrauch - heute (g) - zeigt den Tagesverbrauch (0:00 - 23:59) in 10g Schritten
+* Kosten heute (Euro) - zeigt die errechneten Tageskosten in Euro an (bitte aufgerundet in die Spendenkasse legen)
+* Verbrauch Summe (g) - zeigt den akkumulierten Gasverbrauch in Gramm seit dem Aufstellen der Flasche an
 <img width="480" height="479" alt="Image" src="https://github.com/user-attachments/assets/61f428e3-88db-435b-8290-c1fe503e7198" />
 
 <img width="479" height="480" alt="Image" src="https://github.com/user-attachments/assets/c57c1d0f-ffa4-4e31-8c59-bc7335247e2a" />
