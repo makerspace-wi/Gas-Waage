@@ -61,13 +61,15 @@ Funktionen:
 "Initial Botttle Weight":32298,  - Flaschengewicht wenn neue Flasche aufgestellt wird<br> 
 "eeprom_use":1,  - EPROM-Nutzung in %<br> 
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
-ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
+ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist
+
 ### topic gaswaage/lwt
 "status":"online"<br>  
 "client":"gaswaage_1",<br>   
 "ip":"192.168.X.XXX"  
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
+
 ### gaswaage/in
 "{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
 "{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
