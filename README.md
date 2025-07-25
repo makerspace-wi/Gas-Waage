@@ -48,7 +48,7 @@ Funktionen:
 * Waage neu starten (RESET) - selbsterklärend<br><br>
 
 ## MQTT-Topics
-<h4>topic gaswaage/values</h4>   
+### gaswaage/values  
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
 <h4>topic gaswaage/status</h4>  
 "revision":"1.0_250612", - SW-Revision<br> 
@@ -62,13 +62,13 @@ Funktionen:
 "eeprom_use":1,  - EPROM-Nutzung in %<br> 
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
 ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
-<h4>topic gaswaage/lwt</h4>  
+### topic gaswaage/lwt
 "status":"online"<br>  
 "client":"gaswaage_1",<br>   
 "ip":"192.168.X.XXX"  
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
-<h4>topic gaswaage/in</h4><br>
+### gaswaage/in
 "{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
 "{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
 "{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage<br> 
