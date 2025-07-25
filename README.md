@@ -70,7 +70,7 @@ ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werde
 "client":"gaswaage_1",<br>
 "ip":"192.168.X.XXX" 
 <br><br>
-Per MQTT können folgende Aktivitäten ausgelöst werden:<br>
+Per MQTT können folgende Aktivitäten ausgelöst werden:
 
 ### gaswaage/in
 "{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
