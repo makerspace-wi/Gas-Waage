@@ -20,7 +20,7 @@ Die Sicherungskette für die Gasflasche soll 'locker' sein, um nicht den Wiegevo
 Es darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.<br>
 Auch ist zu beachten, eine neue Gasflasche vorsichtig und sanft auf die Wägezelle aufzusetzten, damit diese nicht beschädigt wird.
 ## Gaswaage Display
-normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
+ist normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
 ### Display Screen #1
 <img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f" width="480"><br><br>
 zeigt die aktuellen Informationen:<br>
