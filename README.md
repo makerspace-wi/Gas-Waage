@@ -63,10 +63,10 @@ Funktionen:
 "last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
 ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist
 
-### topic gaswaage/lwt
-"status":"online"<br>  
-"client":"gaswaage_1",<br>   
-"ip":"192.168.X.XXX"  
+### gaswaage/lwt
+"status":"online"<br>
+"client":"gaswaage_1",<br>
+"ip":"192.168.X.XXX" 
 <br><br>
 Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 
