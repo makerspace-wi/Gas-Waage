@@ -45,7 +45,8 @@ Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
 
 # Achtung - bitte beachten!
 Die Sicherungskette für die Gasflasche soll 'locker' sein, um nicht den Wiegevorgang zu beeinflussen. 
-Auch darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.
+Es darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.<br>
+Auch ist zu beachten, eine neue Gasflasche vorsichtig und sanft auf die Wägezelle aufzusetzten, damit diese nicht beschädigt wird.
 ## Gaswaage Display
 normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
 ### Display Screen #1
