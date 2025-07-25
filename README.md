@@ -46,6 +46,8 @@ Funktionen:
 * Neue Flasche - Nach dem Aufstellen einer neu gefüllten Flasche, muss diese Funktion ausgeführt werden. Es wird das Initial-(Start)Gewicht gemessen und gespeichert. Tages- und Summenverbrauch sowie die 'Kosten heute' auf '0' gesetzt.
 * EPROM löschen - Vorsicht! Löscht den in Flash Memory emulierten EPROM-Bereich - sollte nur durch Admins ausgelöst werden, gefolgt von einem RESET.
 * Waage neu starten (RESET) - selbsterklärend<br><br>
+
+## MQTT-Topics
 <h4>topic gaswaage/values</h4>   
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
 <h4>topic gaswaage/status</h4>  
