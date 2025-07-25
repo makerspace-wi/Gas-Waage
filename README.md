@@ -1,6 +1,6 @@
 # Gas-Waage
-<img src="https://github.com/user-attachments/assets/dea2768a-bedc-4f4e-ba46-a16eebc33680" width="600"><br><br>
-<img src="https://github.com/user-attachments/assets/2c11a47e-38d1-4af4-b34c-e7ab45fe0465" width="600" height=""><img src="https://github.com/user-attachments/assets/e477bd58-a699-49a5-98bb-be74471ab537" width="600" height=""><br><br>
+<img src="https://github.com/user-attachments/assets/dea2768a-bedc-4f4e-ba46-a16eebc33680" width="400"><br><br>
+<img src="https://github.com/user-attachments/assets/2c11a47e-38d1-4af4-b34c-e7ab45fe0465" width="400" height=""><img src="https://github.com/user-attachments/assets/e477bd58-a699-49a5-98bb-be74471ab537" width="400" height=""><br><br>
 
 # Annahmen:
 * Argon Flaschen verfügbar in<br>
