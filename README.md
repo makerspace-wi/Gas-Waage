@@ -12,35 +12,8 @@ Es wurde eine 60kg Wägezelle (Quelle: Holger G.) in eine Halterung aus Holz (Or
 Das Oberteil hat eine runde Form, die 10 und 20 Liter Stahlflaschen aufnehmen kann.<br><br>
 Die Wägezelle ist mit einem [HX711](https://github.com/RobTillaart/HX711/tree/master) Interface verbunden, dass seine Messdaten per I2C einem WEMOS D1 mini NodeMCU bereit stellt.<br><br>
 Das C++ Programm ist eher rudimentär aufgebaut (Dieter H.) und veröffentlicht (published) die Messwerte und Systemstati per WLAN an unseren MQTT-Broker und in einer EPROM-Emulation (FLASH-Speicherbereich) werden alle wichtigen Systemvariablen gespeichert, sie sind nach einem Neustart verfügbar.
-Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert:
+Das aktuelle Gewicht der Gasflasche wird alle 10 Sekunden gesendet und alle 15 Sekunden werden Systemvariablen aktualisiert.
 <br><br>
-<h4>topic gaswaage/values</h4>   
-"Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
-<h4>topic gaswaage/status</h4>  
-"revision":"1.0_250612", - SW-Revision<br> 
-"ip":"192.168.X.XXX",  - IP<br> 
-"rssi":-79,  - WLAN Signalstärke<br> 
-"cnt_reconnect":0,  - Anzahl der WLAN-Reconnct Versuche<br> 
-"client":"gaswaage_1",  - Client Name<br> 
-"scale":74.33300018,  - Waagenkalibrierwert<br> 
-"offset":108917,  - TARA Wert für leere Waage<br>  
-"Initial Botttle Weight":32298,  - Flaschengewicht wenn neue Flasche aufgestellt wird<br> 
-"eeprom_use":1,  - EPROM-Nutzung in %<br> 
-"last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
-ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
-<h4>topic gaswaage/lwt</h4>  
-"status":"online"<br>  
-"client":"gaswaage_1",<br>   
-"ip":"192.168.X.XXX"  
-<br><br>
-Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
-<h4>topic gaswaage/in</h4><br>
-"{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
-"{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
-"{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage<br> 
-"{newbottle}"  -> muss jedesmal ausgeführt werden, wenn eine neue Flasche aufgestellt wird<br> 
-"{reset}"  -> Controller RESET<br> 
-"{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)<br> 
 
 # Achtung - bitte beachten!
 Die Sicherungskette für die Gasflasche soll 'locker' sein, um nicht den Wiegevorgang zu beeinflussen. 
@@ -72,4 +45,31 @@ Funktionen:
 * Waage nullen - Diese Funktion sollte nur bei leerer Waage ausgeführt werden - sie setzt und speichert den Nullpunkt der Waage neu
 * Neue Flasche - Nach dem Aufstellen einer neu gefüllten Flasche, muss diese Funktion ausgeführt werden. Es wird das Initial-(Start)Gewicht gemessen und gespeichert. Tages- und Summenverbrauch sowie die 'Kosten heute' auf '0' gesetzt.
 * EPROM löschen - Vorsicht! Löscht den in Flash Memory emulierten EPROM-Bereich - sollte nur durch Admins ausgelöst werden, gefolgt von einem RESET.
-* Waage neu starten (RESET) - selbsterklärend
+* Waage neu starten (RESET) - selbsterklärend<br><br>
+<h4>topic gaswaage/values</h4>   
+"Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
+<h4>topic gaswaage/status</h4>  
+"revision":"1.0_250612", - SW-Revision<br> 
+"ip":"192.168.X.XXX",  - IP<br> 
+"rssi":-79,  - WLAN Signalstärke<br> 
+"cnt_reconnect":0,  - Anzahl der WLAN-Reconnct Versuche<br> 
+"client":"gaswaage_1",  - Client Name<br> 
+"scale":74.33300018,  - Waagenkalibrierwert<br> 
+"offset":108917,  - TARA Wert für leere Waage<br>  
+"Initial Botttle Weight":32298,  - Flaschengewicht wenn neue Flasche aufgestellt wird<br> 
+"eeprom_use":1,  - EPROM-Nutzung in %<br> 
+"last TS":"17.06.25 11:20:00"  - Zeitmarke der letzten Aktualisierung<br><br>
+ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werden, ob die Waage auch tatsächlich 'online' ist  
+<h4>topic gaswaage/lwt</h4>  
+"status":"online"<br>  
+"client":"gaswaage_1",<br>   
+"ip":"192.168.X.XXX"  
+<br><br>
+Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
+<h4>topic gaswaage/in</h4><br>
+"{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
+"{setscale:-73.7}" -> Waagenkalibrierung setzen (muss eigentlich nur einmal bei Inbetriebnahme gemacht werden)<br> 
+"{getoffset}"  -> TARA Funktion setzt Nullwert für leere Waage<br> 
+"{newbottle}"  -> muss jedesmal ausgeführt werden, wenn eine neue Flasche aufgestellt wird<br> 
+"{reset}"  -> Controller RESET<br> 
+"{wipeeprom}" -> Vorsicht - löscht den in Flash Memory emulierten EPROM-Bereich (reset afterwards)<br> 
