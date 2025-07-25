@@ -48,6 +48,7 @@ Funktionen:
 * Waage neu starten (RESET) - selbsterklärend<br><br>
 
 ## MQTT-Topics
+
 ### gaswaage/values  
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
 <h4>topic gaswaage/status</h4>  
