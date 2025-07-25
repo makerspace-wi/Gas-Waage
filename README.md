@@ -51,7 +51,8 @@ Funktionen:
 
 ### gaswaage/values  
 "Scale Reading": 32409  - alle 10 Sekunden Wert in Gramm<br><br>
-<h4>topic gaswaage/status</h4>  
+
+### gaswaage/status
 "revision":"1.0_250612", - SW-Revision<br> 
 "ip":"192.168.X.XXX",  - IP<br> 
 "rssi":-79,  - WLAN Signalstärke<br> 
@@ -69,7 +70,7 @@ ausserdem wird der 'Last Will Testament' publiziert, hiermit kann geprüft werde
 "client":"gaswaage_1",<br>
 "ip":"192.168.X.XXX" 
 <br><br>
-Per MQTT können folgende Aktivitäten ausgelöst werden:<br><br>
+Per MQTT können folgende Aktivitäten ausgelöst werden:<br>
 
 ### gaswaage/in
 "{setoffset:-104289}"  -> vorher ermittelter Offsetwert setzen (leere Waage - Meßwert = 0)<br>   
