@@ -6,7 +6,7 @@
 * Argon Flaschen verfügbar in<br>
 * 10L -> 16kg gefüllt -> Gasmenge 3,67kg -> 2,1m3 -> (25,00 €*/ m³) Gasgewicht bei 20degC: 3,7kg -> 15,14 €/kg<br>
 * 20L -> 30kg gefüllt -> Gasmenge 7,18kg ->   -> (16,03 €*/ m³) Gasgewicht bei 20degC: 7,15kg -> 9,63 €/kg<br>
-* Volumenmenge Argon Gas: 0,56l/g
+* Volumenmenge Argon Gas: 0,6l/g
 
 Es wurde eine 60kg Wägezelle (Quelle: Holger G.) in eine Halterung aus Holz (Orlando E.) gebaut. Das Unterteil ist quadratisch und hat 3 dem Boden angepasste Standfüße.
 Das Oberteil hat eine runde Form, die 10 und 20 Liter Stahlflaschen aufnehmen kann.<br><br>
