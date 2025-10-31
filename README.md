@@ -21,8 +21,8 @@ Es darf nichts an die Gasflasche gehängt oder sich aufgestützt werden.<br>
 Auch ist zu beachten, eine neue Gasflasche vorsichtig und sanft auf die Wägezelle aufzusetzten, damit diese nicht beschädigt wird.
 ## Gaswaage Display
 ist normalerweise gedimmt und wird heller, wenn man den Screen mit dem Finger berührt
-### Display Screen #1
-<img src="https://github.com/user-attachments/assets/f4a7f5b3-6c9e-4bd0-a814-f1e29df75f4f" width="480"><br><br>
+### Display Screen #1   
+<img width="479" height="479" alt="Image" src="https://github.com/user-attachments/assets/dfcea5bc-332b-43d2-a13a-5e49b0dc6c04" />
 zeigt die aktuellen Informationen:<br>
 * Startgewicht(g) - ist das Gesamtgewicht beim Aufstellen einer neuen Flasche
 * Flaschentyp - zeigt 10 Liter Flasche oder 20 Liter Flasche je nach aufgestelltem Typ (wird von SYMCON ermittelt)
