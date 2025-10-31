@@ -30,6 +30,7 @@ zeigt die aktuellen Informationen:<br>
 * Verbrauch - heute (g) - zeigt den Tagesverbrauch (0:00 - 23:59) in 10g Schritten
 * Kosten heute (Euro) - zeigt die errechneten Tageskosten in Euro an (bitte aufgerundet in die Spendenkasse legen)
 * Verbrauch Summe (g) - zeigt den akkumulierten Gasverbrauch in Gramm seit dem Aufstellen der Flasche an
+* Restgas in %
 
 Der Button "Admin Bereich" führt auf die nächste Seite zur Eingabe eines Admin-Passcodes (kennen nur Personen mit dem 'need to know')
 
