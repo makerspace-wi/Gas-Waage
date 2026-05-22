@@ -48,6 +48,154 @@ Funktionen:
 * EPROM löschen - Vorsicht! Löscht den in Flash Memory emulierten EPROM-Bereich - sollte nur durch Admins ausgelöst werden, gefolgt von einem RESET.
 * Waage neu starten (RESET) - selbsterklärend<br><br>
 
+# GasWaage (ESP8266 + HX711)
+
+Firmware fuer eine WLAN-faehige Gasflaschen-Waage auf Basis eines `Wemos D1 mini` (ESP8266) mit `HX711`-Loadcell-ADC.
+
+Das Projekt misst kontinuierlich das Gewicht, publiziert Messwerte und Status per MQTT, speichert Kalibrierdaten im EEPROM und bietet OTA-Updates ueber ein Webinterface.
+
+## Features
+
+- Gewichtsmessung ueber HX711
+- MQTT Telemetrie und Steuerbefehle
+- Last-Will-Status (online/offline) via MQTT
+- Persistente Kalibrierung (Offset, Scale, Startgewicht) im EEPROM
+- NTP-Zeitstempel fuer Statusmeldungen
+- OTA-Updates mit ElegantOTA (`/update`)
+- Asynchroner Webserver auf Port 80
+
+## Hardware
+
+- Wemos D1 mini (ESP8266)
+- HX711 Modul
+- Load Cell (passend zur gewuenschten Last)
+
+### Pinbelegung (aktuell im Code)
+
+- HX711 `DT` -> `D2` (GPIO4)
+- HX711 `SCK` -> `D1` (GPIO5)
+
+## Projektstruktur
+
+- `src/main.cpp`: Hauptlogik (WiFi, MQTT, Messung, EEPROM, OTA)
+- `src/Credentials.h` / `src/Credentials_ms.h`: WLAN/MQTT Zugangsdaten
+- `platformio.ini`: Board, Framework, Abhaengigkeiten, Build-Flags
+
+## MQTT
+
+### Topics
+
+- Publish Werte: `gaswaage/values`
+- Publish Status: `gaswaage/status`
+- Last Will: `gaswaage/lwt`
+- Subscribe Befehle: `gaswaage/in`
+
+### Beispiel-Payloads fuer `gaswaage/in`
+
+- `{offset:-104289}` -> Offset setzen
+- `{setscale:-73.7}` -> Scale-Faktor setzen
+- `{getoffset}` -> Tara/Offset neu bestimmen
+- `{newbottle}` -> aktuelles Gewicht als Startgewicht speichern
+- `{reset}` -> ESP Neustart
+- `{wipeeprom}` -> EEPROM loeschen (anschliessend Neustart empfohlen)
+
+## MQTT-Stabilitaet (aktueller Stand)
+
+Fuer den Fall "Device ist online, publisht aber nicht mehr" wurden in der Firmware Schutzmechanismen ergaenzt:
+
+- Alle Publishes werden geprueft (Rueckgabewert von `client.publish()` wird ausgewertet).
+- Bei fehlgeschlagenem Publish wird die MQTT-Verbindung aktiv getrennt, damit ein sauberer Reconnect erfolgt.
+- MQTT-Buffer ist auf `512` gesetzt, damit groessere JSON-Nachrichten nicht still verworfen werden.
+- KeepAlive ist auf `30s` gesetzt.
+- Reconnect-Zaehler wird bei Fehlschlag erhoeht und in den Statusdaten publiziert.
+- Der initiale MQTT-Connect (beim Boot) nutzt ebenfalls den LWT-Connect-Pfad.
+- LWT-Connect funktioniert sowohl mit als auch ohne MQTT-Authentifizierung.
+
+Damit wird ein stilles "haengt online, sendet aber nichts" deutlich robuster abgefangen.
+
+## Aenderungen (22.05.2026)
+
+- Fix: `gaswaage/lwt` wird jetzt bereits beim Erststart korrekt gesetzt.
+- Fix: "online aber keine Publishes" wird durch Publish-Checks + erzwungenen Reconnect abgefangen.
+- Verbesserung: robustes Connect-Verhalten bei Brokern mit und ohne User/Pass.
+
+## Erste Inbetriebnahme
+
+1. Zugangsdaten in `src/Credentials_ms.h` oder `src/Credentials.h` eintragen.
+2. Sicherstellen, dass in `src/main.cpp` die richtige Credentials-Datei eingebunden ist.
+3. Hardware anschliessen (HX711 + Load Cell).
+4. Firmware bauen und flashen.
+5. Serielle Konsole oeffnen und WLAN/MQTT-Status pruefen.
+
+## Build, Upload, Monitor
+
+### Mit PlatformIO im PATH
+
+```bash
+platformio run
+platformio run -t upload
+platformio device monitor -b 115200
+```
+
+### Falls `platformio` nicht im PATH liegt
+
+```bash
+~/.platformio/penv/bin/platformio run
+~/.platformio/penv/bin/platformio run -t upload
+~/.platformio/penv/bin/platformio device monitor -b 115200
+```
+
+## OTA-Update
+
+Nach erfolgreichem WLAN-Connect ist das OTA-Interface erreichbar unter:
+
+- `http://<IP-der-GasWaage>/update`
+
+Die IP-Adresse wird beim Start im seriellen Monitor ausgegeben.
+
+## Hinweise
+
+- `monitor_speed` ist auf `115200` gesetzt.
+- Kalibrierdaten werden dauerhaft im EEPROM gespeichert.
+- MQTT-Broker, Port und optional User/Pass werden in den Credentials definiert.
+
+## Troubleshooting
+
+### Geraet ist online, aber es kommen keine MQTT-Werte
+
+1. Serielle Ausgabe pruefen (`115200`) und auf Reconnect-Aktivitaet achten.
+2. Topic-Subscription am Broker pruefen:
+
+```bash
+mosquitto_sub -h <broker-ip> -p <port> -t gaswaage/status -v
+mosquitto_sub -h <broker-ip> -p <port> -t gaswaage/values -v
+mosquitto_sub -h <broker-ip> -p <port> -t gaswaage/lwt -v
+```
+
+3. Sicherstellen, dass `clientId` im Netzwerk eindeutig ist (kein zweites Geraet mit gleicher ID).
+4. In den Credentials Broker/Port/User/Pass gegenpruefen.
+5. Testweise `{reset}` an `gaswaage/in` schicken und Reconnect/Publishes beobachten.
+
+### Es wird nichts auf `gaswaage/lwt` publiziert
+
+1. Auf LWT-Topic abonnieren:
+
+```bash
+mosquitto_sub -h <broker-ip> -p <port> -t gaswaage/lwt -v
+```
+
+2. Geraet neu starten.
+3. Erwartung nach erfolgreichem Connect: retained Meldung mit `status: online`.
+4. Strom oder WLAN kurz unterbrechen (unsauberer Disconnect).
+5. Erwartung: Broker setzt LWT retained auf `status: offline`.
+6. Nach Wiederverbindung: retained Meldung wechselt wieder auf `status: online`.
+
+Hinweis: Falls nur bei einem bestimmten Broker keine LWT-Meldung erscheint, Broker-Logs auf ACL/Retain-Policy pruefen.
+
+## Lizenz
+
+Aktuell keine explizite Lizenzdatei im Projektroot vorhanden. Bei Bedarf `LICENSE` ergaenzen.
+
 ## MQTT-Topics
 
 ### gaswaage/values  
